@@ -15,7 +15,7 @@ public class FileReader {
                 buffer = new byte[10];
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new TestFileIncorrectException(e.getMessage());
         }
         return getProfileFromRawString(sb.toString());
     }
